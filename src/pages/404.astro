@@ -1,0 +1,19 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+---
+
+<PageLayout title={"Page not found"} description={"The page you are looking for doesn’t exist."}>
+  <Container>
+    <section class="animate space-y-6 text-center py-20">
+      <div class="text-6xl font-bold text-black">404</div>
+      <div class="text-heading-secondary">This page could not be found.</div>
+      <div>
+        <a href="/" class="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors text-sm">
+          Go Home
+        </a>
+      </div>
+    </section>
+  </Container>
+</PageLayout>
+
