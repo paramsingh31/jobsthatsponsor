@@ -80,13 +80,19 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const faqToggles = document.querySelectorAll('.faq-toggle');
+    const faqToggles = document.querySelectorAll<HTMLButtonElement>('.faq-toggle');
     
     faqToggles.forEach(toggle => {
-      toggle.addEventListener('click', function() {
+      toggle.addEventListener('click', function(this: HTMLButtonElement) {
         const targetId = this.getAttribute('data-target');
+        if (!targetId) return;
+        
         const content = document.getElementById(targetId);
-        const icon = this.querySelector('.faq-icon');
+        if (!content) return;
+        
+        const icon = this.querySelector<SVGElement>('.faq-icon');
+        if (!icon) return;
+        
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
         
         // Toggle the content
