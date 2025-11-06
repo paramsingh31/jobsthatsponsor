@@ -1,0 +1,105 @@
+---
+// FAQ component with expandable/collapsible questions
+---
+
+<section class="animate space-y-6">
+  <div class="space-y-4">
+    <h5 class="text-heading-primary">
+      FAQ
+    </h5>
+  </div>
+  
+  <div class="space-y-4">
+    <!-- FAQ Item 1 -->
+    <div class="border border-black/15 rounded-lg overflow-hidden">
+      <button 
+        class="faq-toggle w-full text-left px-6 py-4 hover:bg-black/5 transition-colors duration-200 flex justify-between items-center"
+        data-target="faq-1"
+        aria-expanded="false"
+        aria-controls="faq-1"
+      >
+        <h6 class="text-heading-tertiary pr-4">
+          I'm not an international student. Is this still useful?
+        </h6>
+        <svg class="faq-icon w-5 h-5 text-black/50 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div id="faq-1" class="faq-content hidden px-6 pb-4">
+        <p class="text-body-secondary">
+          Absolutely. If you want direct access to hiring managers at fast-growing companies, this beats scrolling through dead job boards any day.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="border border-black/15 rounded-lg overflow-hidden">
+      <button 
+        class="faq-toggle w-full text-left px-6 py-4 hover:bg-black/5 transition-colors duration-200 flex justify-between items-center"
+        data-target="faq-2"
+        aria-expanded="false"
+        aria-controls="faq-2"
+      >
+        <h6 class="text-heading-tertiary pr-4">
+          How often do you actually update this?
+        </h6>
+        <svg class="faq-icon w-5 h-5 text-black/50 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div id="faq-2" class="faq-content hidden px-6 pb-4">
+        <p class="text-body-secondary">
+          Every. Single. Week. No exceptions. If I'm not delivering fresh opportunities every Wednesday, cancel your subscription.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="border border-black/15 rounded-lg overflow-hidden">
+      <button 
+        class="faq-toggle w-full text-left px-6 py-4 hover:bg-black/5 transition-colors duration-200 flex justify-between items-center"
+        data-target="faq-3"
+        aria-expanded="false"
+        aria-controls="faq-3"
+      >
+        <h6 class="text-heading-tertiary pr-4">
+          What if I don't find anything relevant?
+        </h6>
+        <svg class="faq-icon w-5 h-5 text-black/50 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div id="faq-3" class="faq-content hidden px-6 pb-4">
+        <p class="text-body-secondary">
+          That's the point - we'd rather send you 30 perfect matches than 100 maybes. Quality over quantity, always.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const content = document.getElementById(targetId);
+        const icon = this.querySelector('.faq-icon');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        
+        // Toggle the content
+        if (isExpanded) {
+          content.classList.add('hidden');
+          this.setAttribute('aria-expanded', 'false');
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          content.classList.remove('hidden');
+          this.setAttribute('aria-expanded', 'true');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  });
+</script> 

@@ -1,0 +1,72 @@
+---
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+---
+
+<section class="animate space-y-6">
+  <div class="grid grid-cols-1 gap-6">
+    <!-- Personal Plan -->
+    <div class="relative group flex flex-col py-6 px-6 rounded-lg border border-black/15 hover:bg-black/5 transition-colors duration-300 ease-in-out">
+      <div class="flex justify-between items-start mb-4">
+        <h6 class="text-heading-tertiary">Less than the cost of your lunch</h6>
+        <a href="https://access.jobsthatsponsor.com/#/portal/signup" rel="noopener noreferrer" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition-colors get-access-cta">
+          Get Access
+        </a>
+      </div>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl font-semibold text-black">$21</span>
+        <span class="text-lg text-muted line-through">$25</span>
+        <span class="text-body-small">/month</span>
+      </div>
+      <p class="text-body-secondary mb-6">Skip 100+ applications. Land your dream sponsored job.</p>
+      <div class="space-y-3 mb-6">
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="text-body-secondary">All Visa Types - OPT, H1B, TN, OPT, and others</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+          <span class="text-body-secondary">Hand curated - sponsored jobs every Wednesday</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+          </svg>
+          <span class="text-body-secondary">Company insights & Salary bands</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          <span class="text-body-secondary">Direct hiring manager contacts (when available)</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <span class="text-body-secondary">Get Hired Guide - Resume & Cold Email Templates (worth $49)</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+          </svg>
+          <span class="text-body-secondary">List of startups that sponsor O-1 Visas (updated periodically) + Mega list of startups that sponsor -> 1100+ companies</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <svg class="w-4 h-4 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <span class="text-body-secondary">Access to WhatsApp Community - <a href="https://chat.whatsapp.com/EE1CNJvLs0vCnxo5XZBukD?mode=wwt" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-blue-700 underline transition-colors">Join Now</a></span>
+        </div>
+      </div>
+      <div class="border-t border-dashed border-black/20 pt-4">
+        <div class="text-body-secondary font-semibold mb-1">Have any question? Want to post a job?</div>
+        <div class="text-body-secondary">Feel free to contact at <a href="mailto:hi@jobsthatsponsor.com" class="text-accent hover:text-blue-700 underline transition-colors">hi@jobsthatsponsor.com</a></div>
+      </div>
+    </div>
+  </div>
+</section> 

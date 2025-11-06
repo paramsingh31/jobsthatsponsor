@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="/favicon-light.svg"><meta name="generator" content="Astro v5.13.4"><!-- Font preloads --><link rel="preload" href="/_astro/inter-latin-400-normal.C38fXH4l.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/inter-latin-600-normal.LgqL8muc.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/lora-latin-400-normal.BEO3GLPG.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/_astro/lora-latin-600-normal.C9KcfMzc.woff2" as="font" type="font/woff2" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://astro-nano-demo.vercel.app/"><!-- Primary Meta Tags --><title>Home | JobsThatSponsor</title><meta name="title" content="Home | JobsThatSponsor"><meta name="description" content="Astro Nano is a minimal and lightweight blog and portfolio."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://astro-nano-demo.vercel.app/"><meta property="og:title" content="Home | JobsThatSponsor"><meta property="og:description" content="Astro Nano is a minimal and lightweight blog and portfolio."><meta property="og:image" content="https://astro-nano-demo.vercel.app/nano.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://astro-nano-demo.vercel.app/"><meta property="twitter:title" content="Home | JobsThatSponsor"><meta property="twitter:description" content="Astro Nano is a minimal and lightweight blog and portfolio."><meta property="twitter:image" content="https://astro-nano-demo.vercel.app/nano.png"><!-- Other Meta Tags --><meta name="robots" content="index, follow"><meta name="language" content="English"><meta name="author" content="JobsThatSponsor"><!-- Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"JobsThatSponsor","url":"https://astro-nano-demo.vercel.app/","publisher":{"@type":"Person","name":"JobsThatSponsor"}}</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DZnDNxNb.js"></script><script>
+  function init() {
+    onScroll();
+    animate();
+
+    const backToPrev = document.getElementById("back-to-prev");
+    backToPrev?.addEventListener("click", () => window.history.back());
+
+    document.addEventListener("scroll", onScroll);
+  }
+
+  function animate() {
+    const animateElements = document.querySelectorAll(".animate");
+
+    animateElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add("show");
+      }, index * 150);
+    });
+  }
+
+  function onScroll() {
+    if (window.scrollY > 0) {
+      document.documentElement.classList.add("scrolled");
+    } else {
+      document.documentElement.classList.remove("scrolled");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => init());
+  document.addEventListener("astro:after-swap", () => init());
+</script><link rel="stylesheet" href="/_astro/_slug_.B4F9o_pH.css"></head> <body> <header> <div class="mx-auto max-w-screen-sm px-5">  <div class="flex flex-wrap gap-y-2 justify-between"> <a href="/" target="_self" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out">  <div class="font-semibold"> JobsThatSponsor </div>  </a> <nav class="flex gap-1"> <a href="/blog" target="_self" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out underline underline-offset-2"> 
+blog
+ </a> </nav> </div>  </div> </header> <main>  <div class="mx-auto max-w-screen-sm px-5">  <h4 class="animate font-semibold text-black">
+Hi, I'm Nano <span class="text-xl">👋🏻</span> </h4> <div class="space-y-16"> <section> <article class="space-y-4"> <p class="animate">
+I am a minimal, seo friendly, accessible portfolio and blog for developers. 
+            I am an even more lightweight version of my popular theme
+<a href="https://github.com/markhorn-dev/astro-sphere" target="_blank" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out underline underline-offset-2" aria-label="Astro Sphere on Github"> 
+Astro Sphere
+ </a>.
+            I have a lighthouse scores of 100 across the board for performance, 
+            accesibility, best practices and SEO.
+</p> <p class="animate">
+I come packed with full type safety, a sitemap, an rss feed, markdown 
+            and mdx support (use components in your markdown) through astro integrations.
+            I am styled with tailwind and come preconfigured with light, dark and 
+            system/os theme preferences out of the box.
+</p> <p class="animate">
+Visit
+<a href="https://github.com/markhorn-dev/astro-nano" target="_blank" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out underline underline-offset-2" aria-label="JobsThatSponsor on Github"> 
+JobsThatSponsor on Github
+ </a>
+to fork the repository, read the docs or one-click deploy on Vercel or Netlify.
+</p> </article> </section> <section class="animate space-y-6"> <div class="flex flex-wrap gap-y-2 items-center justify-between"> <h5 class="font-semibold text-black">
+Latest posts
+</h5> <a href="/blog" target="_self" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out underline underline-offset-2"> 
+See all posts
+ </a> </div> <ul class="flex flex-col gap-4"> <li> <a href="/blog/welcome" class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 hover:bg-black/5 hover:text-black transition-colors duration-300 ease-in-out"> <div class="flex flex-col flex-1 truncate"> <div class="font-semibold"> Welcome to JobsThatSponsor </div> <div class="text-sm"> A platform for finding jobs that sponsor work visas. </div> </div> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="absolute top-1/2 right-2 -translate-y-1/2 size-5 stroke-2 fill-none stroke-current"> <line x1="5" y1="12" x2="19" y2="12" class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></line> <polyline points="12 5 19 12 12 19" class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></polyline> </svg> </a> </li> </ul> </section> <section class="animate space-y-4"> <h5 class="font-semibold text-black">
+Let's Connect
+</h5> <div class="flex flex-wrap gap-1"> <a href="https://twitter.com/markhorn_dev" target="_blank" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out underline underline-offset-2"> twitter-x </a><a href="https://github.com/markhorn-dev" target="_blank" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out underline underline-offset-2"> github </a><a href="https://www.linkedin.com/in/markhorn-dev" target="_blank" class="inline-block decoration-black/15 hover:decoration-black/25 text-current hover:text-black transition-colors duration-300 ease-in-out underline underline-offset-2"> linkedin </a> </div> </section> </div>  </div>  </main> <footer class="animate"> <div class="mx-auto max-w-screen-sm px-5">  <div class="flex justify-between items-center"> <div>
+&copy; 2024 | JobsThatSponsor </div> </div>  </div> </footer> </body></html>
