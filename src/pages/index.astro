@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import Link from "@components/Link.astro";
+import WhatWeDo from "@components/WhatWeDo.astro";
+import BeforeAfter from "@components/BeforeAfter.astro";
+import Pricing from "@components/Pricing.astro";
+import Reviews from "@components/Reviews.astro";
+import FAQ from "@components/FAQ.astro";
+import { SITE, HOME } from "@consts";
+
+const blog = (await getCollection("blog"))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0,SITE.NUM_POSTS_ON_HOMEPAGE);
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <!-- Badge Alert -->
+    <div class="flex justify-center mb-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-body-small text-accent">
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        Join 1250+ international students who found their dream jobs
+      </div>
+    </div>
+    
+    <h4 class="animate text-heading-primary">
+      Why is finding a U.S.<span class="text-xl">🇺🇸</span> job that actually sponsors visas so damn hard? 
+    </h4>
+    <div class="space-y-16">
+      <section class="animate space-y-6">
+        <div class="space-y-4">
+          <p class="text-body-primary">
+            I get it. You're tired of applying to hundreds of jobs only to find out they "don't sponsor visas" after three rounds of interviews. You're exhausted from sifting through LinkedIn's 100,000+ job posts where 90% are outdated or from companies that haven't sponsored anyone in years.
+          </p>
+          <p>JobsThatSponsor cuts through the noise. We show you ONLY jobs from companies with verified sponsorship history, plus the hiring manager's direct email so you can skip the black hole of online applications.</p>
+          <div class="flex justify-start pt-2">
+            <a href="https://access.jobsthatsponsor.com/#/portal/signup" rel="noopener noreferrer" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors text-sm get-access-cta">
+              Get Access
+            </a>
+            <a href="https://access.jobsthatsponsor.com" rel="noopener noreferrer" target="_blank" class="ml-3 border border-blue-600 text-blue-600 px-4 py-2 rounded-full font-medium hover:bg-blue-50 transition-colors text-sm">
+              Sneak Peak
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <WhatWeDo />
+
+      <BeforeAfter />
+
+      <Pricing />
+
+      <Reviews />
+
+      <FAQ />
+
+    </div>
+  </Container>
+</PageLayout>
